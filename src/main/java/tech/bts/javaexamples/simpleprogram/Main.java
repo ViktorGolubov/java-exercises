@@ -66,6 +66,8 @@ public class Main {
 
         final double p = power(2,10);
         System.out.println(" 2^10 " + p);
+
+
     }
 
 
@@ -84,5 +86,9 @@ public class Main {
     /** prints hello */
     static void printHello(String name, int age){
         System.out.println("Hello " + name + " you are " + age);
+
     }
+
+
+
 }
