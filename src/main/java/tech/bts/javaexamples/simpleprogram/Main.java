@@ -1,5 +1,7 @@
 package tech.bts.javaexamples.simpleprogram;
 
+import tech.bts.javaexamples.classes.MathUtil;
+
 import java.util.*;
 
 public class Main {
@@ -64,24 +66,13 @@ public class Main {
         printHello("John", 30);
         printHello("Mary", 25);
 
-        final double p = power(2,10);
+        final double p = MathUtil.power(2,10);
         System.out.println(" 2^10 " + p);
 
 
     }
 
 
-    static double power (double base, double exponent) {
-
-        double result = 1;
-
-        for (int i = 1; i <= exponent; i++) {
-            result = result * base;
-
-        }
-
-        return result;
-    }
 
     /** prints hello */
     static void printHello(String name, int age){
