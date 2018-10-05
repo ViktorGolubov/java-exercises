@@ -1,5 +1,6 @@
 package tech.bts.javaexamples.simpleprogram;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,16 +8,16 @@ public class Exercise {
 
     public static void main(String[] args) {
 
-        final String r = returnFunction(" Hola Ferran ", 5);
+        final String r = repeat(" Hola Ferran ", 3);
         System.out.println(r);
 
-        final String m = padLeft("go", 3);
+        final String m = padLeft("go", 5);
         System.out.println(m);
 
-        final String p = padRight("go", 1);
+        final String p = padRight("go", 0);
         System.out.println(p);
 
-        final List g = ListOfRange(3,8);
+        final List g = ListOfRange(2,15);
         System.out.println(g);
     }
 
@@ -25,9 +26,9 @@ public class Exercise {
     // Write a function that, given a string s and a number n (those are the input parameters)
     // returns a string (return type) made of s repeated n times.
 
-    static String returnFunction (String s, int n) {
+    static String repeat (String s, int n) {
 
-        String result = null;
+        String result = "";
 
         for (int i = 1; i <= n; i++) {
 
@@ -65,7 +66,7 @@ public class Exercise {
         String result = "";
         int length = s.length();
 
-        for (int i = 1; i >= (n + length); i++) {
+        for (int i = 1; i <= (n + length); i++) {
 
             result += " ";
 
@@ -81,9 +82,12 @@ public class Exercise {
 
 
     static List<Integer> ListOfRange (int start, int end) {
-        List<Integer> number =
-                Arrays.asList(3, 4, 5, 6, 7, 8);
+        List<Integer> number = new ArrayList<>();
 
+        for (int i = start; i <= end; i++) {
+
+
+        }
         return number;
     }
 
