@@ -11,7 +11,7 @@ public class Stats {
     public Stats() {
         this.sum = 0;
         this.count = 0;
-        this.max = 0;
+        this.max = Double.MIN_VALUE;
         this.min = Double.MAX_VALUE;
 
     }
@@ -42,9 +42,9 @@ public class Stats {
 
     public  double getAverage () {
 
-      double Average = getSum() / getCount();
+      double average = getSum() / getCount();
 
-        return Average;
+        return average;
     }
 
     public double getMax() {
