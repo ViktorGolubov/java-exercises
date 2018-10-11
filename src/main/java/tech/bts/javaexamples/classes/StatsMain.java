@@ -17,6 +17,6 @@ public class StatsMain {
         System.out.println(stats.getCount());
         System.out.println(stats.getAverage());
         System.out.println(stats.getMax());
-        //System.out.println(stats.getMin());
+        System.out.println(stats.getMin());
     }
 }

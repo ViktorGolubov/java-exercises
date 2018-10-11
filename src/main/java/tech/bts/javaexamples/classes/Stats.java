@@ -2,19 +2,17 @@ package tech.bts.javaexamples.classes;
 
 public class Stats {
 
-    private double number;
     private double sum;
     private int count;
-    private double result;
     private double max;
     private double min;
 
 
     public Stats() {
-        this.number = 0;
         this.sum = 0;
         this.count = 0;
-        this.result = 0;
+        this.max = 0;
+        this.min = Double.MAX_VALUE;
 
     }
 
@@ -22,21 +20,17 @@ public class Stats {
     public void add (double x) {
         this.sum += x;
         this.count++;
-        this.max = max;
-        this.min = x;
 
-        min = x;
-
-        if (min > max) {
+        if (max < x) {
             max = x;
         }
 
+        if (min > x) {
+            min = x;
+        }
     }
 
     public double getSum() {
-        for (int i = 0; i <= number; i++) {
-
-        }
 
         return sum;
     }
@@ -48,14 +42,19 @@ public class Stats {
 
     public  double getAverage () {
 
-       result = getSum() / getCount();
+      double Average = getSum() / getCount();
 
-        return result;
+        return Average;
     }
 
     public double getMax() {
 
         return max;
+    }
+
+    public  double getMin () {
+
+        return min;
     }
 
 }
