@@ -10,6 +10,9 @@ public class StatsMain {
         stats.add(5.0);
         stats.add(8.0);
         stats.add(7.0);
+        stats.add(-5.0);
+        stats.add(-9.0);
+        stats.add(-2.0);
 
 
 
