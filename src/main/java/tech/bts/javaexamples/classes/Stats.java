@@ -11,7 +11,7 @@ public class Stats {
     public Stats() {
         this.sum = 0;
         this.count = 0;
-        this.max = Double.MIN_VALUE;
+        this.max = Double.NEGATIVE_INFINITY;
         this.min = Double.MAX_VALUE;
 
     }
