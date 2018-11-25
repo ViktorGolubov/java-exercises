@@ -10,19 +10,29 @@ public class SimpleCalculator {
 
 
     public int getCounter() {
-        return add(0);
+        return counter;
     }
 
-    public int add(int с) {
+    public void add(int с) {
 
-         int result = this.counter += с;
-         return result;
+        this.counter += с;
+
 
     }
 
-    public int multiply(int c) {
+    public void multiply(int c) {
 
-        int result = this.counter * c;
-        return result;
+        this.counter = this.counter * c;
+
+    }
+
+    public void subtract(int с) {
+
+        this.counter = this.counter - с;
+    }
+
+    public void divide(int с) {
+
+        this.counter = this.counter / с;
     }
 }

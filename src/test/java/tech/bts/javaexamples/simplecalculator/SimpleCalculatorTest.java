@@ -10,16 +10,35 @@ public class SimpleCalculatorTest {
     @Test
     public void add() {
 
-        SimpleCalculator с = new SimpleCalculator(0);
-        с.add(2);
-        с.add(1);
-        assertEquals(с.getCounter(), 3);
+        SimpleCalculator calc = new SimpleCalculator(0);
+        calc.add(2);
+        calc.add(1);
+        assertEquals(calc.getCounter(), 3);
     }
 
     @Test
     public void multiply() {
-        SimpleCalculator с = new SimpleCalculator(3);
-        с.multiply(4);
-        assertEquals(с.getCounter(), 12);
+        SimpleCalculator calc = new SimpleCalculator(3);
+        calc.multiply(4);
+        assertEquals(calc.getCounter(), 12);
     }
+
+    @Test
+    public void subtract() {
+        SimpleCalculator calc = new SimpleCalculator(12);
+        calc.subtract(3);
+        assertEquals(calc.getCounter(), 9);
+    }
+
+    @Test
+    public void divide(int с) {
+        SimpleCalculator calc = new SimpleCalculator(9);
+        calc.divide(2);
+        assertEquals(calc.getCounter(), 4);
+
+    }
+
+
+
+
 }
