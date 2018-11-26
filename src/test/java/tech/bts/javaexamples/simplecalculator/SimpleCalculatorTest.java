@@ -2,7 +2,6 @@ package tech.bts.javaexamples.simplecalculator;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class SimpleCalculatorTest {
@@ -31,14 +30,60 @@ public class SimpleCalculatorTest {
     }
 
     @Test
-    public void divide(int с) {
+    public void divide() {
         SimpleCalculator calc = new SimpleCalculator(9);
         calc.divide(2);
         assertEquals(calc.getCounter(), 4);
 
     }
 
+    @Test
+    public void get_sign_0() {
+        SimpleCalculator calc = new SimpleCalculator(0);
+        calc.getSign(0);
+        assertEquals(calc.getSign(0), 0);
 
+    }
 
+    @Test
+    public void get_sign_1() {
+        SimpleCalculator calc = new SimpleCalculator(5);
+        calc.getSign(5);
+        assertEquals(calc.getSign(1), 1);
+
+    }
+
+    @Test
+    public void get_sign_less_than_0() {
+        SimpleCalculator calc = new SimpleCalculator(-5);
+        calc.getSign(-5);
+        assertEquals(calc.getSign(-1), -1);
+
+    }
+
+    @Test
+    public void abs() {
+        SimpleCalculator calc = new SimpleCalculator(-5);
+        calc.abs(-5);
+        assertEquals(calc.getCounter(), 5);
+
+    }
+    @Test
+    public void factorial() {
+        SimpleCalculator calc = new SimpleCalculator(2);
+        calc.add(2);
+        calc.factorial(4);
+        assertEquals(calc.factorial(4), 24);
+
+    }
+
+    @Test
+    public void square () {
+        SimpleCalculator calc = new SimpleCalculator(2);
+        calc.add(2);
+        calc.square();
+        assertEquals(calc.square(), 16);
+
+    }
 
 }
